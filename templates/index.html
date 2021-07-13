@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -40,7 +39,7 @@
 <h1> {{message}}</h1>
 
 <hr>
-    {% for title,comapny,summary,date,link in data %}
+    {% for result in data %}
       
     
     <div class="card">
@@ -48,11 +47,11 @@
          New
         </div>
         <div class="card-body">
-          <h5 class="card-title">Job Title: {{title}}</h5>
-          <b class="card-title">Company: {{comapny}}</b>
-          <p class="card-text">job Description: {{summary}}</p>
-          <p class="card-text">Posted:{{date}}</p>
-          <a href="{{link}}" class="btn btn-info">Apply</a>
+          <h5 class="card-title">Job Title: {{result.title}}</h5>
+          <b class="card-title">Company: {{result.comapny}}</b>
+          <p class="card-text">job Description: {{result.summary}}</p>
+          <p class="card-text">Posted:{{result.date}}</p>
+          <a href="{{result.link}}" class="btn btn-info">Apply</a>
         </div>
       </div>
       {% endfor %}
@@ -73,5 +72,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
